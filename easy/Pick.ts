@@ -10,6 +10,7 @@ interface Todo {
 type MyPick<T, K extends keyof T> = {
   [P in K]: T[P]; // title: (title | completed)[title] : string
 };
+
 type TodoPreview = MyPick<Todo, "title" | "completed">;
 
 const todo: TodoPreview = {

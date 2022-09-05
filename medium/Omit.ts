@@ -6,6 +6,7 @@ interface Todo {
 type MyOmit<T, U> = {
   [P in keyof T as P extends U ? never : P]: T[P];
 };
+
 type TodoPreview = MyOmit<Todo, "description" | "title">;
 
 const todo: TodoPreview = {

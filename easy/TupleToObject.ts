@@ -1,7 +1,7 @@
 const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 
 //implementation
-type TupleToObject<T extends readonly any[]> = {
+type TupleToObject<T extends readonly (number | string | symbol)[]> = {
   // number 是索引名称 0, 1, 2, 3
   [K in T[number]]: K;
 };

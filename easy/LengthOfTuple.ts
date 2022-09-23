@@ -7,7 +7,12 @@ type spaceX = [
   "HUMAN SPACEFLIGHT"
 ];
 
-// type X = tesla extends { length: 0 } ? 0 : tesla["length"];
+type T = {
+  name: "a";
+  length: 3;
+};
+
+type X = T extends { length: 0 } ? 0 : T["length"];
 
 // implementation
 

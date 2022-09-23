@@ -7,6 +7,8 @@ type spaceX = [
   "HUMAN SPACEFLIGHT"
 ];
 
+// type X = tesla extends { length: 0 } ? 0 : tesla["length"];
+
 // implementation
 
 type Length<T extends readonly unknown[]> = T extends { length: 0 }
